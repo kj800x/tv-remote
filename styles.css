@@ -1,0 +1,81 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 30px;
+  grid-template-areas:
+    "on on"
+    "off off"
+    "volume chrome"
+    "volume switch"
+    "toast toast";
+}
+
+.on {
+  grid-area: on;
+}
+.off {
+  grid-area: off;
+}
+.chrome {
+  grid-area: chrome;
+}
+.switch {
+  grid-area: switch;
+}
+.volume {
+  grid-area: volume;
+}
+.toast {
+  grid-area: toast;
+  display: flex;
+}
+.toast-input {
+  flex-grow: 1;
+}
+.toast-send {
+  margin: 0;
+  margin-left: 5px;
+  font-size: large;
+}
+
+button {
+  margin: 20px;
+  border: 3px solid red;
+  background-color: transparent;
+  border-radius: 20px;
+  font-size: x-large;
+  color: white;
+}
+button:focus {
+  outline: none;
+}
+button:active {
+  background: rgb(50, 50, 50);
+  box-shadow: 0px 0px 14px 1px rgba(100, 100, 100, 0.75);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  margin: 0px 4px;
+}
+
+.volume {
+  margin: 10px;
+  padding: 10px;
+  float: left;
+  text-align: center;
+}
+
+.volume input {
+  -webkit-appearance: slider-vertical;
+  height: 100%;
+}
+
+input[type="text"] {
+  background-color: black;
+  color: white;
+}
